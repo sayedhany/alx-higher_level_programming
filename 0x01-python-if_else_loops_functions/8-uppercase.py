@@ -6,5 +6,5 @@ def uppercase(str):
             res = chr(new)
         else:
             res = char
-        print("{}".format(char), end="")
+        print("{}".format(res), end="")
     print()
