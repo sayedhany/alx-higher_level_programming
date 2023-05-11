@@ -6,10 +6,10 @@ if __name__ == "__main__":
     arglen = len(sys.argv)
     if arglen != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
-    elif sys.argv[2] in operators:
+        sys.exit(1)
+    elif sys.argv[2] not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+        sys.exit(1)
     else:
         num1 = int(sys.argv[1])
         num2 = int(sys.argv[3])
