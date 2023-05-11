@@ -7,6 +7,7 @@ if __name__ == "__main__":
         print("{:d} arguments.".format(arrlen - 1))
     elif arrlen == 2:
         print("{:d} argument:".format(arrlen - 1))
+        print("{:d}: {:s}".format(1, sys.argv[1]))
     else:
         print("{:d} arguments:".format(arrlen - 1))
         for count in range(1, arrlen):
