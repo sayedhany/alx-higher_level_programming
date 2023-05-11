@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import sys
-from calculater_1 import add, mul, div, sub
+from calculator_1 import add, mul, div, sub
 if __name__ == "__main__":
-    operators = ["add", "mul", "div", "sub"]
+    operators = ["+", "-", "/", "*"]
     arglen = len(sys.argv)
     if arglen != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -14,13 +14,12 @@ if __name__ == "__main__":
         num1 = int(sys.argv[1])
         num2 = int(sys.argv[3])
         operator = sys.argv[2]
-        match operator:
-            case "+":
+        if operator == "+":
                 print("{:d} + {:d} = {:d}".format(num1, num2, add(num1, num2)))
-            case "-":
+        elif operator == "-":
                 print("{:d} - {:d} = {:d}".format(num1, num2, sub(num1, num2)))
-            case "*":
+        elif operator == "*":
                 print("{:d} * {:d} = {:d}".format(num1, num2, mul(num1, num2)))
-            case "/":
+        elif operator == "/":
                 print("{:d} / {:d} = {:d}".format(num1, num2, div(num1, num2)))
 
