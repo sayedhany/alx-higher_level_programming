@@ -6,4 +6,3 @@ def print_matrix_integer(matrix=[[]]):
         for n in range(len(max1)):
             print('{:d}'.format(max1[n]),
                   end='\n' if n == len(max1) - 1 else ' ')
-
