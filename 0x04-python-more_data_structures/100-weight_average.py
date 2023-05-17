@@ -3,6 +3,9 @@ from functools import reduce
 def weight_average(my_list=[]):
     if not my_list:
         return 0
-    sum_products = reduce(lambda acc, tpl: acc + (tpl[0] * tpl[1]), my_list, 0)
-    sum_weights = reduce(lambda acc, tql: acc + tql[1], my_list, 0)
+    sum_products = 0
+    sum_weights = 0
+    for score, weight in my_list:
+        sum_products += score * weight
+        sum_weights += weight
     return sum_products / sum_weights
