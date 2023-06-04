@@ -33,3 +33,8 @@ def matrix_divided(matrix, div):
             for row in matrix
             ]
     return divided_matrix
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("2-matrix_divided.txt")
