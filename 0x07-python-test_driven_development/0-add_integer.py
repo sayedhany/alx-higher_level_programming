@@ -2,6 +2,8 @@
 """
 in this module we add two numbers
 """
+
+
 def add_integer(a, b=98):
     """
     this function return the sum of two numbers
@@ -11,6 +13,7 @@ def add_integer(a, b=98):
     if type(b) not in [int, float]:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
+
 
 if __name__ == "__main__":
     import doctest

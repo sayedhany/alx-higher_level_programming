@@ -10,7 +10,10 @@ def matrix_divided(matrix, div):
         """
         check if matrix is list of lists
         """
-        return isinstance(variable, list) and all(isinstance(item, list) for item in variable)
+        bool_list = isinstance(variable, list)
+        bool_lists = all(isinstance(item, list) for item in variable) 
+        return bool_list and bool_lists
+
     if not is_list_of_lists(matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     len_row = len(matrix[0])
@@ -23,5 +26,8 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     
-    divided_matrix = list(map(lambda row: list(map(lambda x: round(x/div, 2), row)), matrix))
+    divided_matrix = [
+            [round(elem / div, 2) for elem in row]
+            for row in matrix
+            ]
     return divided_matrix
