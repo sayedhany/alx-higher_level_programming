@@ -2,6 +2,8 @@
 """
 module which return list of object attr and methods
 """
+
+
 def lookup(obj):
     """
     return list
