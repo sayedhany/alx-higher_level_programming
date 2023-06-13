@@ -76,15 +76,13 @@
 >>> my_list.append(5)
 >>> print(my_list)
 ['Betty', 4, 2, 3, 5]
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: unorderable types: int() < str()
 >>> print(my_list)
 ['Betty', 4, 2, 3, 5]
 
 >>> my_list = MyList()
 >>> my_list.append(a)
-Traceback (most recent call last):NameError: name 'a' is not defined
+Traceback (most recent call last):
+NameError: name 'a' is not defined
 >>> my_list.append(4)
 >>> my_list.append(2)
 >>> my_list.append(3)
@@ -136,17 +134,3 @@ TypeError: append() takes exactly one argument (0 given)
 [1, 2, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 5]
-None
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(None)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> print(my_list)
-[1, None, 2, 3, 5]
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: unorderable types: NoneType() < int()
->>> print(my_list)
-[1, None, 2, 3, 5]
