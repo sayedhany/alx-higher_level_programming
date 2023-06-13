@@ -5,12 +5,12 @@ print sorted
 
 
 class MyList(list):
-    """class"""
+    """MyClass inherit from list"""
     pass
 
     def print_sorted(self):
         """
-        method
+        print sorted list
         """
         sorted_lisst = sorted(list(self))
         print(sorted_lisst)
