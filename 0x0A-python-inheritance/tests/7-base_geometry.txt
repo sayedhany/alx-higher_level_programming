@@ -3,3 +3,18 @@
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
+>>> bg.integer_validator("sayed", -2) 
+Traceback (most recent call last):
+....
+ValueError: <name> must be greater than 0
+
+>>> bg.integer_validator("sayed", "5") 
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+
+>>> bg.integer_validator("sayed")      
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
