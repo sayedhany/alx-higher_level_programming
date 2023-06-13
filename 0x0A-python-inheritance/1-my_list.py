@@ -8,9 +8,9 @@ class MyList(list):
     """class"""
     pass
 
-    """
-    function to print sorted
-    """
     def print_sorted(self):
-        sorted_lisst = sorted(self)
+        """
+        method
+        """
+        sorted_lisst = sorted(list(self))
         print(sorted_lisst)
