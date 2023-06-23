@@ -6,10 +6,16 @@ from os import path
 
 class Base:
     """Manage id attributes for future classes and avoid code duplication
+    Attributes:
+        __nb_objects (int): Number of objects
     """
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Class constructor
+        Args:
+            id (int): id attribute
+        """
         if id is not None:
             self.id = id
         else:
@@ -18,6 +24,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Writes the JSON string representation of list_objs to a file"""
         my_list = []
         filename = cls.__name__ + ".json"
 
@@ -29,6 +36,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """Returns: Instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
             r = cls(1, 1)
         else:
@@ -38,6 +46,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Returns: List of instances"""
         filename = cls.__name__ + ".json"
         my_list = []
 
@@ -50,12 +59,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Returns: JSON string representation of list_dictionaries"""
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
+        """Returns: List of the JSON string representation"""
         if json_string is None or json_string == '':
             return []
         return json.loads(json_string)
